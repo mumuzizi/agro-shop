@@ -29,10 +29,11 @@ export default new Router({
       path:'/profile',
       name:'profile',
       component: Profile
-    },{
+    },
+    {
       path:'/ajax',
       name:'ajax',
       component:Ajax
-    }
+    },
   ]
 })

@@ -1,20 +1,20 @@
 import Mock from 'mockjs'
 import data from './data.json'
 
-Mock.mock('http://www.weichuang.com/getList',{data:data.list});
+Mock.mock('http://www.program.com/getList',{data:data.list});
 
 
-Mock.mock('http://www.weichuang.com/getUser',{
+Mock.mock('http://www.program.com/getUser',{
     'name|2':'weichuang',
     'age|18-35':20
 });
 
-Mock.mock('http://weichuang.com/regexp',{
+Mock.mock('http://program.com/regexp',{
     'regexp1':/[a-z][A-Z][0-9]/,
     'regexp2':/\d{5,10}/
 });
 
-Mock.mock('http://www.weichuang.com/list',{
+Mock.mock('http://www.program.com/list',{
     'info|10-20':[
         {
             'index|+1':1,
@@ -41,4 +41,4 @@ let productData = req =>{
     }
     return productList;
 }
-Mock.mock('http://www.weichuang.com/getVarietyItem',productData)
+Mock.mock('http://www.program.com/getVarietyItem',productData)
