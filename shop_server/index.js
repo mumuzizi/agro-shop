@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const app = new Koa();
 
-//解决跨域问题
+
 // 解决跨域问题
 const cors = require('koa2-cors');
 app.use(cors({
@@ -16,14 +16,16 @@ app.use(bodyParser());
 
 //加载路由
 const Router = require('koa-router');
-let user = require('./controller/user.js');//返回的是user.js里的router
-let product = require('./controller/product.js')
+let user = require('./controller/user.js');
+let product = require('./controller/product.js');
 let type = require('./controller/type.js');
+let cart = require('./controller/cart');
 
 let router = new Router();
-router.use('/user',user.routes());
-router.use('/product',product.routes());
-router.use('/type',type.routes());
+router.use('/user', user.routes());
+router.use('/product', product.routes());
+router.use('/type', type.routes());
+router.use('/cart', cart.routes())
 
 app.use(router.routes());//启动路由,router.routes(name)给定的查找路线name
 app.use(router.allowedMethods());

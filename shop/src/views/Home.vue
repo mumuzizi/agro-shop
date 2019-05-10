@@ -214,7 +214,7 @@ export default {
 </script>
 
 <style lang="scss">
-.container{
+.container{ 
   background-color: #eee;
 }
 .nav-title{

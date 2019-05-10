@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     userInfo: {}
   },
-  getters: {
+  getters: { 
 
   },
   mutations: {
